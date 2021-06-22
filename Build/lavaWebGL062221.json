@@ -1,0 +1,16 @@
+{
+"companyName": "DefaultCompany",
+"productName": "lava-idle",
+"productVersion": "0.1",
+"dataUrl": "lavaWebGL062221.data.unityweb",
+"wasmCodeUrl": "lavaWebGL062221.wasm.code.unityweb",
+"wasmFrameworkUrl": "lavaWebGL062221.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.1.8f1"
+}
