@@ -14,6 +14,8 @@
 </head>
 <body>
 
+
+
 <h2>My First Web Page</h2>
 <p>My First Paragraph.</p>
 
@@ -22,12 +24,17 @@
 <script>
     document.addEventListener( 'visibilitychange' , function() {
     if (document.hidden) {
+        gameInstance.SendMessage("JavascriptHook","SetPageInactive")
         document.title = "inactive"
     } else {
+        gameInstance.SendMessage("JavascriptHook","SetPageActive")
         document.title = "active"
     }
 }, false );
 </script>
+
+
+
 
 
 
