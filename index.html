@@ -20,12 +20,13 @@
 <p id="demo"></p>
 
 <script>
-    if (!document.hidden) {
-        document.title = "active";
+    document.addEventListener( 'visibilitychange' , function() {
+    if (document.hidden) {
+        document.title = "inactive"
+    } else {
+        document.title = "active"
     }
-    else{
-        document.title = "inactive";
-    }
+}, false );
 </script>
 
 
