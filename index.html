@@ -20,7 +20,12 @@
 <p id="demo"></p>
 
 <script>
-document.getElementById("demo").innerHTML = 5 + 6;
+    if (!document.hidden) {
+        document.title = "active";
+    }
+    else{
+        document.title = "inactive";
+    }
 </script>
 
 
