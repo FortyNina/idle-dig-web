@@ -13,22 +13,6 @@
     </script>
 </head>
 <body>
-
-    <script>
-    gameInstance.SendMessage("JavascriptHook","ChangeText")
-
-    document.addEventListener( 'visibilitychange' , function() {
-    if (document.hidden) {
-        gameInstance.SendMessage("JavascriptHook","SetPageInactive")
-        document.title = "inactive"
-    } else {
-        gameInstance.SendMessage("JavascriptHook","SetPageActive")
-        document.title = "active"
-    }
-}, false );
-</script>
-
-
 <div class="webgl-content">
     <div id="gameContainer" style="width: 1920px; height: 1320px"></div>
 </div>
