@@ -1,32 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>lava-idle</title>
+    <title>Unity WebGL Player | lava-idle</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.javascript"></script>
+    <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
-        var gameInstance = UnityLoader.instantiate("gameContainer", "Build/lavaMini122821.json", {onProgress: UnityProgress});
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/lavaMini122821.json", {onProgress: UnityProgress});
     </script>
-</head>
-<body>
-
-
-
-<h2>My Third Web Page</h2>
-<p>My First Paragraph.</p>
-
-
-<div style = "border : solid 1px black; width:200px; height:30px; margin:auto; text-align: :center" onclick ="gameInstance.SendMessage('JavascriptHook','SetPageInactive')">try CLICK</div>
-
-<p id="demo"></p>
-
-<script>
-    gameInstance.SendMessage("JavascriptHook","ChangeText")
-
+  </head>
+  <body>
+    <script>
     document.addEventListener( 'visibilitychange' , function() {
     if (document.hidden) {
         gameInstance.SendMessage("JavascriptHook","SetPageInactive")
@@ -37,16 +24,13 @@
     }
 }, false );
 </script>
-
-
-
-
-
-
-<div class="webgl-content">
-    <div id="gameContainer" style="width: 1920px; height: 1320px"></div>
-</div>
-<div class="simmer">template by: <a href="https://simmer.io" target="_blank">SIMMER.io</a></div>
-<script src="TemplateData/responsive.javascript"></script>
-</body>
+    <div class="webgl-content">
+      <div id="unityContainer" style="width: 1920px; height: 1320px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">lava-idle</div>
+      </div>
+    </div>
+  </body>
 </html>
